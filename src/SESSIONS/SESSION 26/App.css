@@ -1,0 +1,102 @@
+/* WHOLE CONTAINER */
+.App {
+  background-color: #0266e7;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 50px;
+}
+
+.App * {
+  font-family: "Poppins", sans-serif;
+}
+/* INDIVIDUAL CONTAINER */
+.App > section {
+  height: 455px;
+  width: 330px;
+  background-color: white;
+  margin-top: 50px;
+  margin-left: 30px;
+  margin-right: 30px;  
+  border-radius: 25px;
+  transition: all 0.2s;
+}
+
+/* HEADING */
+.heading {
+  margin: 0px 10px;
+  text-align: center;
+  border-bottom: 1px solid black;
+}
+
+.heading > p {
+  opacity: 0.5;
+  font-size: 20px;
+  margin: 0px;
+  margin-top: 5px;
+}
+
+/* CONTENT */
+.content {
+  margin-left: 30px;
+}
+
+.content > p {
+  margin: 5px;
+}
+
+h1 {
+  font-size: 50px;
+  margin: 0px;
+}
+
+span {
+  font-size: 10px;
+}
+
+.active {
+  font-weight: 900;
+  font-size: 20px;
+}
+
+.inacive {
+  font-size: 20px;
+}
+
+.dull {
+  opacity: 0.5;
+}
+
+/* BUTTON CONTAINER */
+.buttonContainer {
+  display: flex;
+  justify-content: center;
+}
+
+button {
+  width: 282px;
+  border-radius: 5rem;
+  background-color: #3183fb;
+  letter-spacing: 4px;
+  border-color: #3183fb;
+  color: white;
+  height: 45px;
+  opacity: 0.5;
+}
+
+/* HOVER EFFECT */
+.App > section:hover {
+  transform: translateY(-8px);
+}
+
+.App > section:hover button {
+  opacity: 1;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: #0067ff;
+}

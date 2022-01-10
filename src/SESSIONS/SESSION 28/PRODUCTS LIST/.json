@@ -1,0 +1,50 @@
+[
+  {
+    "name": "Microsoft Surface Pro 7",
+    "price": "89,990",
+    "picture": "https://images-eu.ssl-images-amazon.com/images/I/31MN8WI0S6L._AC_SX184_.jpg",
+    "id": "1"
+  },
+  {
+    "name": "HP Pavilion",
+    "price": "66,990",
+    "picture": "https://m.media-amazon.com/images/I/71hmqIQJFdL._AC_UL320_.jpg",
+    "id": "2"
+  },
+  {
+    "name": "Acer Nitro 5",
+    "price": "68,990",
+    "picture": "https://m.media-amazon.com/images/I/71evs2WKJjS._AC_UL320_.jpg",
+    "id": "3"
+  },
+  {
+    "name": "HP Chromeebook",
+    "price": "26,990",
+    "picture": "https://m.media-amazon.com/images/I/613WULNEr1L._AC_UL320_.jpg",
+    "id": "4"
+  },
+  {
+    "name": "Lenovo IdeaPad Slim 3",
+    "price": "39,990",
+    "picture": "https://m.media-amazon.com/images/I/61s7sJEpsVL._AC_UL320_.jpg",
+    "id": "5"
+  },
+  {
+    "name": "Dell 14",
+    "price": "39,990",
+    "picture": "https://m.media-amazon.com/images/I/8147cwFm2PL._AC_UL320_.jpg",
+    "id": "6"
+  },
+  {
+    "name": "AVITA Cosmos 2 in 1",
+    "price": "15,990",
+    "picture": "https://m.media-amazon.com/images/I/51z0Sd72wTL._AC_UL320_.jpg",
+    "id": "7"
+  },
+  {
+    "name": "Mi Notebook Pro",
+    "price": "60,990",
+    "picture": "https://m.media-amazon.com/images/I/71iiXU7HHkL._AC_UL320_.jpg",
+    "id": "8"
+  }
+]

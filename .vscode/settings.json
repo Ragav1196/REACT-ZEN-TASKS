@@ -1,0 +1,6 @@
+/* TO HAVE THE HTML EMMET ABBREVATIONS IN JSX TOO */
+{
+    "emmet.includeLanguages": {
+        "javascript": "javascriptreact"
+    }
+}
