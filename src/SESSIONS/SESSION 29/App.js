@@ -1,39 +1,106 @@
 import "./App.css";
-import { TopBar } from "./SESSIONS/SESSION 28/TopBar";
-import { MainContent } from "./SESSIONS/SESSION 28/MainContent";
-import { SideMenuBar } from "./SESSIONS/SESSION 28/SideMenuBar";
-import { AdminPanel } from "./SESSIONS/SESSION 28/PRODUCTS LIST/AdminPanel";
-import { AdminPanel as UsersAdminPanel } from "./SESSIONS/SESSION 28/USERS LIST/AdminPanel";
-import { Switch, Route } from "react-router-dom";
+import TextField from "@mui/material/TextField";
+import Button from "@mui/material/Button";
+import { useState } from "react";
+import { UsersList } from "./SESSIONS/SESSION 29/UsersList";
+import OutsideClickHandler from "react-outside-click-handler";
+import { getUsers } from "./SESSIONS/SESSION 29/UsersList";
 
 export default function App() {
+  // MAIN ARRAY
+  const [users, setUsers] = useState([]);
+
+  // TO TOGGLE HIDE ADD BUTTON
+  const [addBtn, setAddBtn] = useState(true);
+
+  // TO TOGGLE HIDE ADD FORM
+  const [addForm, setAddForm] = useState(false);
+
+  // TO ADD NEW USER
+  const [name, setName] = useState("");
+  const [avatar, setAvatar] = useState("");
+
+  let addUsers = () => {
+    const newUsers = {
+      name,
+      avatar,
+    };
+
+    fetch("https://616bc2b216c3fa00171717bf.mockapi.io/users", {
+      method: "POST",
+      body: JSON.stringify(newUsers),
+      headers: { "content-Type": "application/json" },
+    }).then(() => getUsers(setUsers));
+  };
+
   return (
-    <div>
-      <Switch>
-        <Route exact path="/">
-          <section className="wholeContent">
-            <SideMenuBar />
-            <div className="middleWholeContent">
-              <TopBar />
-              <MainContent />
-            </div>
-          </section>
-        </Route>
-
-        <Route path="/products-list">
-          <div className="adminPanel">
-            <SideMenuBar />
-            <AdminPanel />
-          </div>
-        </Route>
-
-        <Route path="/users-list">
-          <div className="adminPanel">
-            <SideMenuBar />
-            <UsersAdminPanel />
-          </div>
-        </Route>
-      </Switch>
-    </div>
+    <section className="addUser">
+      <article>
+        <h1>USERS LIST</h1>
+        <OutsideClickHandler
+          onOutsideClick={() => {
+            setAddForm(false);
+            setAddBtn(true);
+          }}
+        >
+          {addBtn ? (
+            <>
+              <Button
+                onClick={() => {
+                  setAddForm(!addForm);
+                  setAddBtn(false);
+                }}
+                id="addButton"
+                variant="contained"
+                size="small"
+                color="success"
+              >
+                ADD USER
+              </Button>
+            </>
+          ) : (
+            ""
+          )}
+          {addForm ? (
+            <>
+              <div className="addForm">
+                <TextField
+                  onChange={(data) => setName(data.target.value)}
+                  id="outlined-basic"
+                  size="small"
+                  label="Name"
+                  variant="outlined"
+                />
+                <TextField
+                  onChange={(data) => setAvatar(data.target.value)}
+                  id="outlined-basic"
+                  size="small"
+                  label="Picture avatar"
+                  variant="outlined"
+                />
+              </div>
+              <Button
+                onClick={() => {
+                  setAddBtn(true);
+                  setAddForm(false);
+                  addUsers();
+                }}
+                id="addButton"
+                variant="contained"
+                size="small"
+                color="success"
+              >
+                ADD
+              </Button>
+            </>
+          ) : (
+            ""
+          )}
+        </OutsideClickHandler>
+      </article>
+      <article>
+        <UsersList users={users} setUsers={setUsers} />
+      </article>
+    </section>
   );
 }

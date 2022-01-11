@@ -1,13 +1,12 @@
 import "./App.css";
 import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { UsersList } from "./SESSIONS/SESSION 29/UsersList";
 import OutsideClickHandler from "react-outside-click-handler";
 import { getUsers } from "./SESSIONS/SESSION 29/UsersList";
 
 export default function App() {
-
   // MAIN ARRAY
   const [users, setUsers] = useState([]);
 
