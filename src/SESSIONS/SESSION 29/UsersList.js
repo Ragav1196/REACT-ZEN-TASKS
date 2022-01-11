@@ -6,7 +6,7 @@ export function UsersList({ users, setUsers }) {
     getUsers(setUsers);
   }
 
-  useEffect(callGetUsers, []);
+  useEffect(callGetUsers, [setUsers]);
 
   // TO TOGGLE HIDE EDIT FORM
   const [editForm, setEditForm] = useState(null);
