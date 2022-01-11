@@ -121,4 +121,8 @@ body {
   .userDetails > p {
     margin: 0px;
   }
+
+  .addUser > article > div{
+    width: 86vw;
+  }
 }

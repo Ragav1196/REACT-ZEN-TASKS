@@ -73,9 +73,9 @@ export default function App() {
                 />
                 <TextField
                   onChange={(data) => setAvatar(data.target.value)}
-                  id="outlined-basic"
+                  id="outlined"
                   size="small"
-                  label="Picture avatar"
+                  label="Picture URL"
                   variant="outlined"
                 />
               </div>
