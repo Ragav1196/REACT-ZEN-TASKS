@@ -1,6 +1,6 @@
 import { AddMovies } from "./AddMovies";
 import { MoviesList } from "./MoviesList";
-import { Switch, Route, Link } from "react-router-dom";
+import { Switch, Route } from "react-router-dom";
 import { Trailer } from "./Trailer";
 import { EditMovies } from "./EditMovies";
 import AppBar from "@mui/material/AppBar";
