@@ -1,0 +1,181 @@
+.nav {
+  display: flex;
+  gap: 24px;
+  margin: 20px;
+  font-size: 24px;
+  justify-content: space-around;
+}
+
+#nav {
+  justify-content: center;
+  height: 10px;
+}
+
+.inputFields {
+  display: flex;
+  flex-direction: column;
+  margin-left: 30px;
+  padding: 20px;
+  align-items: center;
+}
+
+.inputFields button {
+  width: 200px;
+  margin-top: 20px;
+  height: 32px;
+}
+
+.inputFields input {
+  width: 400px;
+  margin-bottom: 5px;
+  height: 30px;
+}
+
+.movieContainer {
+  width: 340px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  border-radius: 2%;
+  overflow: hidden;
+  background-color: #e7b6b6cc;
+  height: min-content;
+  width: min-content;
+}
+
+.posterPic {
+  height: 300px;
+  width: 200px;
+  object-fit: cover;
+}
+
+.movieDetails {
+  margin: 0px 3px;
+}
+
+.MovieSpecs {
+  height: 80px;
+  display: flex;
+  align-items: center;
+  padding: 10px 0px;
+  justify-content: space-between;
+}
+
+.MovieSpecs h3 {
+  margin: 0px;
+}
+
+.MovieSpecs h3:nth-child(1) {
+  width: 65%;
+  text-transform: uppercase;
+}
+
+.movieRating {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.movieSummary {
+  height: 100px;
+  overflow-y: scroll;
+  margin: 5px;
+  font-size: 14px;
+}
+
+#Summary {
+  margin-top: 10px;
+  padding: 10px;
+}
+
+#descriptionBtn {
+  font-size: 12px;
+}
+
+#trailerBtn {
+  padding: 0px;
+}
+
+#editBtn {
+  background-color: #607d8b;
+}
+
+#backBtn {
+  margin: 20px;
+}
+
+.TrailerMovieSpecs {
+  padding: 0px 15px;
+}
+
+.editDelBtn {
+  display: flex;
+  justify-content: space-between;
+  margin: 5px;
+}
+
+.ButtonForMovies {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 0px;
+}
+
+.ButtonForMovies button {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  font-size: 15px;
+  transition: all 0.3s;
+}
+
+.ButtonForMovies button:nth-child(1) {
+  color: green;
+}
+
+.ButtonForMovies button:nth-child(2) {
+  color: red;
+}
+
+.ButtonForMovies button:hover {
+  transform: scale(1.2);
+}
+
+.font {
+  font-family: "Poppins", sans-serif;
+}
+
+.wholeContent {
+  display: flex;
+  gap: 20px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  padding: 20px;
+}
+
+.homeHeading {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.addColor {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media (max-width: 461px) {
+  .inputFields {
+    margin-left: 0px;
+  }
+  .MuiFormControl-root {
+    width: 80vw;
+  }
+
+  .posterPic {
+    height: 78vh;
+    width: 80vw;
+    object-fit: cover;
+  }
+}
