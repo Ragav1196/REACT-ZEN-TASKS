@@ -165,11 +165,17 @@
   align-items: center;
 }
 
-@media (max-width: 425px) {
-  .inputFields{
+@media (max-width: 461px) {
+  .inputFields {
     margin-left: 0px;
   }
-  .MuiFormControl-root{
+  .MuiFormControl-root {
     width: 80vw;
+  }
+
+  .posterPic {
+    height: 78vh;
+    width: 80vw;
+    object-fit: cover;
   }
 }
