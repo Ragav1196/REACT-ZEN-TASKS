@@ -10,6 +10,8 @@ export default function App() {
   // MAIN ARRAY
   const [users, setUsers] = useState([]);
 
+  console.log(users)
+
   // TO TOGGLE HIDE ADD BUTTON
   const [addBtn, setAddBtn] = useState(true);
 

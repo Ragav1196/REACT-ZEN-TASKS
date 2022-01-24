@@ -15,15 +15,15 @@ export function UsersList({ users, setUsers }) {
   const [userName, setUserName] = useState("");
   const [userAvatar, setUserAvatar] = useState("");
 
-  function editFormHide(id) {
+  function editFormHide(id, index) {
     if (!editForm) {
       setEditForm(id);
-      setUserName(users[id - 1].name);
-      setUserAvatar(users[id - 1].avatar);
+      setUserName(users[index].name);
+      setUserAvatar(users[index].avatar);
     } else if (editForm !== id) {
       setEditForm(id);
-      setUserName(users[id - 1].name);
-      setUserAvatar(users[id - 1].avatar);
+      setUserName(users[index].name);
+      setUserAvatar(users[index].avatar);
     } else {
       setEditForm(null);
     }
@@ -31,12 +31,13 @@ export function UsersList({ users, setUsers }) {
 
   return (
     <section className="userContentCtnr">
-      {users.map(({ name, avatar, id }) => (
+      {users.map(({ name, avatar, id }, i) => (
         <UserContent
           name={name}
           avatar={avatar}
           id={id}
-          key={id}
+          key={i}
+          index={i}
           editForm={editForm}
           setEditForm={setEditForm}
           editFormHide={editFormHide}

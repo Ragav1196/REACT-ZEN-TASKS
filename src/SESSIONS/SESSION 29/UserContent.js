@@ -6,6 +6,7 @@ export function UserContent({
   name,
   avatar,
   id,
+  index,  
   editForm,
   setEditForm,
   editFormHide,
@@ -46,7 +47,7 @@ export function UserContent({
         <p>{name}</p>
         <Button
           onClick={() => {
-            editFormHide(id);
+            editFormHide(id, index);
           }}
           id="addButton"
           variant="contained"
